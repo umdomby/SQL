@@ -11,3 +11,7 @@
 #select * from post;
 
 set global time_zone = '-3:00';
+
+#kill_port
+netstat -ano.
+taskkill -pid "name_port" /f
