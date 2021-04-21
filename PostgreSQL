@@ -1,3 +1,0 @@
-Open your registry editor.
-Change the value of HKEY_CLASSES_ROOT\.js\Content Type from text/plain to text/javascript.
-Restart the pgadmin server. You can do this by ending the pgadmin background task from the task manager.
