@@ -1,22 +1,8 @@
--- CREATE TABLE employee(
---     id BIGSERIAL NOT NULL PRIMARY KEY,
---     first_name VARCHAR (50),
---     last_name VARCHAR (50),
---     gender VARCHAR (6),
---     email VARCHAR (150),
---     data_of_birth DATE
--- )
-
--- DROP TABLE employee;
-
--- INSERT INTO employee(first_name, last_name, gender, email, data_of_birth)
--- VALUES ('Jhon','Doe','MALE', 'a@a.ru','2000-01-01');
-
 --Console
--- SELECT * FROM employee;
--- SELECT FROM employee;
--- SELECT first_name FROM employee;
--- SELECT first_name, last_name FROM employee;
+SELECT * FROM employee;
+SELECT FROM employee;
+SELECT first_name FROM employee;
+SELECT first_name, last_name FROM employee;
 
 --sort
 SELECT * FROM employee ORDER BY country_of_birth;
@@ -46,5 +32,7 @@ SELECT country_of_birth, count(*) FROM employee GROUP BY country_of_birth HAVING
 SELECT country_of_birth, count(*) FROM employee GROUP BY country_of_birth HAVING count(*) > 30 ORDER BY count(*) DESC ;
 
 --AS псевдонимы first_name AS name, ...
-
 SELECT COALESCE(email, 'not applicable') FROM employee;
+
+--repeat
+SELECT email, count(*) FROM employee GROUP BY email;
