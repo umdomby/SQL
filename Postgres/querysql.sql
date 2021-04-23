@@ -36,3 +36,8 @@ SELECT COALESCE(email, 'not applicable') FROM employee;
 
 --repeat
 SELECT email, count(*) FROM employee GROUP BY email;
+
+--REFERENCES
+ALTER TABLE employee ADD bicycle_id BIGINT REFERENCES bicycle(id);
+--ONE-TO-ONE
+ALTER TABLE employee ADD UNIQUE (bicycle_id);
